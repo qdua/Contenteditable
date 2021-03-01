@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contenteditable - текстовий редактор</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="toolbar">
+            <a href="#" class="toolbar-b fas fa-bold" title="Жирный"></a>
+            <a href="#" class="toolbar-i fas fa-italic" title="Курсив"></a>
+            <a href="#" class="toolbar-u fas fa-underline" title="Подчёркнутый"></a>
+            <a href="#" class="toolbar-s fas fa-strikethrough" title="Зачёркнутый"></a>
+            <a href="#" class="toolbar-sup fas fa-superscript" title="Верхний индекс"></a>
+            <a href="#" class="toolbar-sub fas fa-subscript" title="Нижний индекс"></a>
+            <a href="#" class="toolbar-ul fas fa-list-ul" title="Маркированный список"></a>
+            <a href="#" class="toolbar-ol fas fa-list-ol" title="Нумерованный список"></a>
+            <a href="#" class="toolbar-p" title="Параграф">p</a>
+            <a href="#" class="toolbar-h1" title="Заголовок">H1</a>
+            <a href="#" class="toolbar-hr" title="Горизонтальная линия">hr</a>
+            <a href="#" class="toolbar-blockquote fas fa-quote-right" title="Цитата"></a>
+            <a href="#" class="toolbar-img far fa-image" title="Изображение"></a>
+            <a href="#" class="toolbar-a fas fa-link" title="Ссылка"></a>
+            <a href="#" class="toolbar-unlink fas fa-unlink" title="Удаление ссылки"></a>
+            <a href="#" class="toolbar-html" title="Вставить html">HTML</a>
+            <a href="#" class="toolbar-text" title="Вставить текст">Text</a>
+            <br>
+            <a href="#" class="toolbar-left fas fa-align-left" title="по левому краю"></a>
+            <a href="#" class="toolbar-center fas fa-align-center" title="по центру"></a>
+            <a href="#" class="toolbar-right fas fa-align-right" title="по правому краю"></a>
+            <a href="#" class="toolbar-justify fas fa-align-justify" title="по ширине"></a>
+            <select class="toolbar-font">
+                <option selected="selected" disabled="disabled">Шрифт</option>
+                <option value="arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="georgia">Georgia</option>
+                <option value="impact">Impact</option>
+                <option value="roboto">Tahoma</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="verdana">Verdana</option>
+            </select>
+            <select class="toolbar-size">
+                <option selected="selected" disabled="disabled">Размер</option>
+                <option value="1">10px</option>
+                <option value="2">12px</option>
+                <option value="3">14px</option>
+                <option value="4">16px</option>
+                <option value="5">18px</option>
+                <option value="6">21px</option>
+                <option value="7">26px</option>
+            </select>
+            <span>Цвет</span>
+            <input class="toolbar-color" type="color" value="#0000ff">
+            <span>Фон</span>
+            <input class="toolbar-bg" type="color" value="#ff0000">
+            <br>
+            <a href="#" class="toolbar-undo fas fa-undo" title="Отмена"></a>
+            <a href="#" class="toolbar-redo fas fa-redo" title="Повтор"></a>
+            <a href="#" class="toolbar-delete far fa-trash-alt" title="Удалить"></a>
+            <a href="#" class="toolbar-selectAll">Выделить всё</a>
+            <a href="#" class="toolbar-removeFormat">Очистить стили</a>
+            <a href="#" class="toolbar-cut fas fa-cut" title="Вырезать"></a>
+            <a href="#" class="toolbar-copy fas fa-copy" title="Копировать"></a>
+        </div>
+
+        <div class="editor" contenteditable="true">
+            <p>
+                <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong>
+                Nullam molestie tellus nibh, eu finibus odio congue at. Nam facilisis orci non ultrices pretium. Maecenas sodales sed turpis sed vehicula. Duis tristique tempus mi, eget semper libero. Sed in faucibus velit.
+                <u>Proin congue quam sed ornare elementum.</u>
+                Maecenas vehicula ullamcorper mauris, ac auctor turpis viverra a. Donec bibendum auctor orci in maximus.</p>
+            <ul>
+                <li>Phasellus faucibus nisl id venenatis dignissim.</li>
+                <li>Ut laoreet velit sed gravida vestibulum.</li>
+                <li>Praesent et justo accumsan, pellentesque ligula sit amet, posuere justo.</li>
+            </ul>
+            <ol>
+                <li>Integer nec ullamcorper ligula, aliquet laoreet turpis.</li>
+                <li>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</li>
+                <li>Donec gravida a enim at tincidunt. Nulla urna erat, volutpat eget diam id, varius vulputate tortor.
+                </li>
+            </ol>
+        </div>
+        <p style="padding: 24px 0;">
+            <input type="checkbox" id="toggle-editor">
+            Показать исходный код
+        </p>
+
+        <script src="main.js"></script>
+    </body>
+</html>
