@@ -1,2 +1,2 @@
-# Contenteditable JS
+# Contenteditable JS JQuery
 Contenteditable - текстовий редактор
